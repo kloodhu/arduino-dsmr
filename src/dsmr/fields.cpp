@@ -56,12 +56,12 @@ constexpr char units::kvarh[];
 constexpr ObisId identification::id;
 constexpr char identification::name[];
 
-constexpr ObisId p1_version::id;
-constexpr char p1_version::name[];
+/*constexpr ObisId p1_version::id;*/
+/*constexpr char p1_version::name[];*/
 
 /* extra field for Belgium */
-constexpr ObisId p1_version_be::id;
-constexpr char p1_version_be::name[];
+/*constexpr ObisId p1_version_be::id;*/
+/*constexpr char p1_version_be::name[];*/
 
 constexpr ObisId timestamp::id;
 constexpr char timestamp::name[];
@@ -98,12 +98,12 @@ constexpr ObisId total_exported_energy::id;
 constexpr char total_exported_energy::name[];
 
 /* extra for Lux */
-constexpr ObisId reactive_power_delivered::id;
-constexpr char reactive_power_delivered::name[];
+/*constexpr ObisId reactive_power_delivered::id;*/
+/*constexpr char reactive_power_delivered::name[];*/
 
 /* extra for Lux */
-constexpr ObisId reactive_power_returned::id;
-constexpr char reactive_power_returned::name[];
+/*constexpr ObisId reactive_power_returned::id;*/
+/*constexpr char reactive_power_returned::name[];*/
 
 constexpr ObisId electricity_tariff::id;
 constexpr char electricity_tariff::name[];
@@ -117,38 +117,38 @@ constexpr char power_returned::name[];
 constexpr ObisId electricity_threshold::id;
 constexpr char electricity_threshold::name[];
 
-constexpr ObisId electricity_switch_position::id;
-constexpr char electricity_switch_position::name[];
+/*constexpr ObisId electricity_switch_position::id;*/
+/*constexpr char electricity_switch_position::name[];*/
 
-constexpr ObisId electricity_failures::id;
-constexpr char electricity_failures::name[];
+/*constexpr ObisId electricity_failures::id;*/
+/*constexpr char electricity_failures::name[];*/
 
-constexpr ObisId electricity_long_failures::id;
-constexpr char electricity_long_failures::name[];
+/*constexpr ObisId electricity_long_failures::id;*/
+/*constexpr char electricity_long_failures::name[];*/
 
-constexpr ObisId electricity_failure_log::id;
-constexpr char electricity_failure_log::name[];
+/*constexpr ObisId electricity_failure_log::id;*/
+/*constexpr char electricity_failure_log::name[];*/
 
-constexpr ObisId electricity_sags_l1::id;
-constexpr char electricity_sags_l1::name[];
+/*constexpr ObisId electricity_sags_l1::id;*/
+/*constexpr char electricity_sags_l1::name[];*/
 
-constexpr ObisId electricity_sags_l2::id;
-constexpr char electricity_sags_l2::name[];
+/*constexpr ObisId electricity_sags_l2::id;*/
+/*constexpr char electricity_sags_l2::name[];*/
 
-constexpr ObisId electricity_sags_l3::id;
-constexpr char electricity_sags_l3::name[];
+/*constexpr ObisId electricity_sags_l3::id;*/
+/*constexpr char electricity_sags_l3::name[];*/
 
-constexpr ObisId electricity_swells_l1::id;
-constexpr char electricity_swells_l1::name[];
+/*constexpr ObisId electricity_swells_l1::id;*/
+/*constexpr char electricity_swells_l1::name[];*/
 
-constexpr ObisId electricity_swells_l2::id;
-constexpr char electricity_swells_l2::name[];
+/*constexpr ObisId electricity_swells_l2::id;*/
+/*constexpr char electricity_swells_l2::name[];*/
 
-constexpr ObisId electricity_swells_l3::id;
-constexpr char electricity_swells_l3::name[];
+/*constexpr ObisId electricity_swells_l3::id;*/
+/*constexpr char electricity_swells_l3::name[];*/
 
-constexpr ObisId message_short::id;
-constexpr char message_short::name[];
+/*constexpr ObisId message_short::id;*/
+/*constexpr char message_short::name[];*/
 
 constexpr ObisId message_long::id;
 constexpr char message_long::name[];
@@ -171,7 +171,7 @@ constexpr char current_l2::name[];
 constexpr ObisId current_l3::id;
 constexpr char current_l3::name[];
 
-constexpr ObisId power_delivered_l1::id;
+/*constexpr ObisId power_delivered_l1::id;
 constexpr char power_delivered_l1::name[];
 
 constexpr ObisId power_delivered_l2::id;
@@ -187,47 +187,42 @@ constexpr ObisId power_returned_l2::id;
 constexpr char power_returned_l2::name[];
 
 constexpr ObisId power_returned_l3::id;
-constexpr char power_returned_l3::name[];
+constexpr char power_returned_l3::name[];*/
 
 /* LUX */
-constexpr ObisId reactive_power_delivered_l1::id;
+/*constexpr ObisId reactive_power_delivered_l1::id;
 constexpr char reactive_power_delivered_l1::name[];
 
-/* LUX */
 constexpr ObisId reactive_power_delivered_l2::id;
 constexpr char reactive_power_delivered_l2::name[];
 
-/* LUX */
 constexpr ObisId reactive_power_delivered_l3::id;
 constexpr char reactive_power_delivered_l3::name[];
 
-/* LUX */
 constexpr ObisId reactive_power_returned_l1::id;
 constexpr char reactive_power_returned_l1::name[];
 
-/* LUX */
 constexpr ObisId reactive_power_returned_l2::id;
 constexpr char reactive_power_returned_l2::name[];
 
-/* LUX */
 constexpr ObisId reactive_power_returned_l3::id;
-constexpr char reactive_power_returned_l3::name[];
+constexpr char reactive_power_returned_l3::name[];*/
 
-constexpr ObisId gas_device_type::id;
+/*constexpr ObisId gas_device_type::id;
 constexpr char gas_device_type::name[];
 
 constexpr ObisId gas_equipment_id::id;
 constexpr char gas_equipment_id::name[];
 
 constexpr ObisId gas_valve_position::id;
-constexpr char gas_valve_position::name[];
+constexpr char gas_valve_position::name[];*/
 
 /* _NL */
-constexpr ObisId gas_delivered::id;
-constexpr char gas_delivered::name[];
+/*constexpr ObisId gas_delivered::id;
+constexpr char gas_delivered::name[];*/
 
 /* _BE */
-constexpr ObisId gas_delivered_be::id;
+/*constexpr ObisId gas_delivered_be::id;
 constexpr char gas_delivered_be::name[];
 
 constexpr ObisId gas_delivered_text::id;
@@ -267,10 +262,10 @@ constexpr ObisId sub_valve_position::id;
 constexpr char sub_valve_position::name[];
 
 constexpr ObisId sub_delivered::id;
-constexpr char sub_delivered::name[];
+constexpr char sub_delivered::name[];*/
 
-constexpr ObisId active_energy_import_current_average_demand::id;
+/*constexpr ObisId active_energy_import_current_average_demand::id;
 constexpr char active_energy_import_current_average_demand::name[];
 
 constexpr ObisId active_energy_import_maximum_demand_running_month::id;
-constexpr char active_energy_import_maximum_demand_running_month::name[];
+constexpr char active_energy_import_maximum_demand_running_month::name[];*/
