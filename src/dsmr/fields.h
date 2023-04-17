@@ -33,6 +33,7 @@
 #include "util.h"
 #include "parser.h"
 
+/*
 #ifndef DSMR_GAS_MBUS_ID
 #define DSMR_GAS_MBUS_ID 1
 #endif
@@ -45,6 +46,7 @@
 #ifndef DSMR_SUB_MBUS_ID
 #define DSMR_SUB_MBUS_ID 4
 #endif
+*/
 
 namespace dsmr
 {
