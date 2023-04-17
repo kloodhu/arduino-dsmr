@@ -312,11 +312,11 @@ namespace dsmr
     /* momentaryPowerFactor; Instantaneous power factor (in rawfileld, but probably should use other struct */
     DEFINE_FIELD(power_factor, String, ObisId(1, 0, 13, 7, 0), RawField);
     /* momentaryPowerFactorL1; Instantaneous power factor in phase L1 (in rawfileld, but probably should use other struct */
-    DEFINE_FIELD(power_factor, String, ObisId(1, 0, 33, 7, 0), RawField);
+    DEFINE_FIELD(power_factor_l1, String, ObisId(1, 0, 33, 7, 0), RawField);
     /* momentaryPowerFactorL2; Instantaneous power factor in phase L2 (in rawfileld, but probably should use other struct */
-    DEFINE_FIELD(power_factor, String, ObisId(1, 0, 53, 7, 0), RawField);
+    DEFINE_FIELD(power_factor_l2, String, ObisId(1, 0, 53, 7, 0), RawField);
     /* momentaryPowerFactorL3; Instantaneous power factor in phase L3 (in rawfileld, but probably should use other struct */
-    DEFINE_FIELD(power_factor, String, ObisId(1, 0, 73, 7, 0), RawField);
+    DEFINE_FIELD(power_factor_l3, String, ObisId(1, 0, 73, 7, 0), RawField);
     
      /* Datas on the end of the last month. Text message max 2048 characters */
     DEFINE_FIELD(monthly_datas, String, ObisId(0, 0, 98, 1, 0), StringField, 0, 2048);
