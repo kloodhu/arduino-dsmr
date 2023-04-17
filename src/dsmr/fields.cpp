@@ -52,6 +52,7 @@ constexpr char units::GJ[];
 constexpr char units::MJ[];
 constexpr char units::kvar[];
 constexpr char units::kvarh[];
+constexpr char units::Hz[];
 
 constexpr ObisId identification::id;
 constexpr char identification::name[];
@@ -62,7 +63,6 @@ constexpr char timestamp::name[];
 constexpr ObisId equipment_id::id;
 constexpr char equipment_id::name[];
 
-/* extra for Lux */
 constexpr ObisId energy_delivered_lux::id;
 constexpr char energy_delivered_lux::name[];
 
@@ -72,7 +72,6 @@ constexpr char energy_delivered_tariff1::name[];
 constexpr ObisId energy_delivered_tariff2::id;
 constexpr char energy_delivered_tariff2::name[];
 
-/* extra for Lux */
 constexpr ObisId energy_returned_lux::id;
 constexpr char energy_returned_lux::name[];
 
@@ -82,11 +81,9 @@ constexpr char energy_returned_tariff1::name[];
 constexpr ObisId energy_returned_tariff2::id;
 constexpr char energy_returned_tariff2::name[];
 
-/* extra for Lux */
 constexpr ObisId total_imported_energy::id;
 constexpr char total_imported_energy::name[];
 
-/* extra for Lux */
 constexpr ObisId total_exported_energy::id;
 constexpr char total_exported_energy::name[];
 
@@ -120,5 +117,45 @@ constexpr char current_l1::name[];
 constexpr ObisId current_l2::id;
 constexpr char current_l2::name[];
 
+constexpr ObisId current_l3::id;
+constexpr char current_l3::name[];
+
+/****    ADDED   ****/
+
+constexpr ObisId energy_combined_total::id;
+constexpr char energy_combined_total::name[];
+
+constexpr ObisId maximum_current_l1::id;
+constexpr char maximum_current_l1::name[];
+
+constexpr ObisId maximum_current_l2::id;
+constexpr char maximum_current_l2::name[];
+
+constexpr ObisId maximum_current_l3::id;
+constexpr char maximum_current_l3::name[];
+
+constexpr ObisId frequency::id;
+constexpr char frequency::name[];
+
+constexpr ObisId power_factor::id;
+constexpr char power_factor::name[];
+
+constexpr ObisId power_factor_l1::id;
+constexpr char power_factor_l1::name[];
+
+constexpr ObisId power_factor_l2::id;
+constexpr char power_factor_l2::name[];
+
+constexpr ObisId power_factor_l3::id;
+constexpr char power_factor_l3::name[];
+
+constexpr ObisId monthly_datas::id;
+constexpr char monthly_datas::name[];
+
+constexpr ObisId COSEM_logical_device_name::id;
+constexpr char COSEM_logical_device_name::name[];
+
+constexpr ObisId breaker_status::id;
+constexpr char breaker_status::name[];
 constexpr ObisId current_l3::id;
 constexpr char current_l3::name[];
