@@ -214,6 +214,7 @@ namespace dsmr
       static constexpr char MJ[] = "MJ";
       static constexpr char kvar[] = "kvar";
       static constexpr char kvarh[] = "kvarh";
+      static constexpr char Hz[] = "Hz";
     };
 
     const uint8_t GAS_MBUS_ID = DSMR_GAS_MBUS_ID;
@@ -257,15 +258,11 @@ namespace dsmr
     /* Meter Reading electricity delivered by client (Tariff 2) in 0,001 kWh */
     DEFINE_FIELD(energy_returned_tariff2, FixedValue, ObisId(1, 0, 2, 8, 2), FixedField, units::kWh, units::Wh);
 
-    /*
- * Extra fields used for Luxembourg
- */
     DEFINE_FIELD(total_imported_energy, FixedValue, ObisId(1, 0, 3, 8, 0), FixedField, units::kvarh, units::kvarh);
     DEFINE_FIELD(total_exported_energy, FixedValue, ObisId(1, 0, 4, 8, 0), FixedField, units::kvarh, units::kvarh);
 
     /* Tariff indicator electricity. The tariff indicator can also be used
- * to switch tariff dependent loads e.g boilers. This is the
- * responsibility of the P1 user */
+     * to switch tariff dependent loads e.g boilers. This is the responsibility of the P1 user */
     DEFINE_FIELD(electricity_tariff, String, ObisId(0, 0, 96, 14, 0), StringField, 4, 4);
 
     /* Actual electricity power delivered (+P) in 1 Watt resolution */
@@ -273,29 +270,21 @@ namespace dsmr
     /* Actual electricity power received (-P) in 1 Watt resolution */
     DEFINE_FIELD(power_returned, FixedValue, ObisId(1, 0, 2, 7, 0), FixedField, units::kW, units::W);
 
-    /*
- * Extra fields used for Luxembourg
- */
     /* The actual threshold Electricity in kW. Removed in 4.0.7 / 4.2.2 / 5.0 */
     DEFINE_FIELD(electricity_threshold, FixedValue, ObisId(0, 0, 17, 0, 0), FixedField, units::kW, units::W);
 
-    /* Text message codes: numeric 8 digits (Note: Missing from 5.0 spec)
- * */
     /* Text message max 2048 characters (Note: Spec says 1024 in comment and
- * 2048 in format spec, so we stick to 2048). */
+     * 2048 in format spec, so we stick to 2048). */
     DEFINE_FIELD(message_long, String, ObisId(0, 0, 96, 13, 0), StringField, 0, 2048);
 
     /* Instantaneous voltage L1 in 0.1V resolution (Note: Spec says V
- * resolution in comment, but 0.1V resolution in format spec. Added in
- * 5.0) */
+     * resolution in comment, but 0.1V resolution in format spec. Added in 5.0) */
     DEFINE_FIELD(voltage_l1, FixedValue, ObisId(1, 0, 32, 7, 0), FixedField, units::V, units::mV);
     /* Instantaneous voltage L2 in 0.1V resolution (Note: Spec says V
- * resolution in comment, but 0.1V resolution in format spec. Added in
- * 5.0) */
+     * resolution in comment, but 0.1V resolution in format spec. Added in 5.0) */
     DEFINE_FIELD(voltage_l2, FixedValue, ObisId(1, 0, 52, 7, 0), FixedField, units::V, units::mV);
     /* Instantaneous voltage L3 in 0.1V resolution (Note: Spec says V
- * resolution in comment, but 0.1V resolution in format spec. Added in
- * 5.0) */
+     * resolution in comment, but 0.1V resolution in format spec. Added in 5.0) */
     DEFINE_FIELD(voltage_l3, FixedValue, ObisId(1, 0, 72, 7, 0), FixedField, units::V, units::mV);
 
     /* Instantaneous current L1 in A resolution */
@@ -305,6 +294,24 @@ namespace dsmr
     /* Instantaneous current L3 in A resolution */
     DEFINE_FIELD(current_l3, FixedValue, ObisId(1, 0, 71, 7, 0), FixedField, units::A, units::mA);
 
+/****    ADDED OBIS CODES    ****/
+    
+    /* cumulativeActiveEnergyCombined; Absolute active energy (A+) total [kWh] */
+    DEFINE_FIELD(energy_combined_total, FixedValue, ObisId(1, 0, 15, 8, 0), FixedField, units::kWh, units::Wh);    
+
+    /* currentLimitationLimit1; / maximumCurrentL1 (mA) */
+    DEFINE_FIELD(maximum_current_l1, FixedValue, ObisId(1, 0, 31, 4, 0), FixedField, units::A, units::mA);
+    /* currentLimitationLimit1; / maximumCurrentL2 (mA)  */
+    DEFINE_FIELD(maximum_current_l2, FixedValue, ObisId(1, 0, 51, 4, 0), FixedField, units::A, units::mA);
+    /* currentLimitationLimit1; / maximumCurrentL3 (mA)  */
+    DEFINE_FIELD(maximum_current_l3, FixedValue, ObisId(1, 0, 71, 4, 0), FixedField, units::A, units::mA);
+    
+    /* frequency; Frequency [Hz]  */
+    DEFINE_FIELD(frequency, FixedValue, ObisId(1, 0, 14, 7, 0), FixedField, units::Hz);
+    
+    /* momentaryPowerFactor; Instantaneous power factor (in rawfileld, but probably should use other struct */
+    DEFINE_FIELD(power_factor, String, ObisId(1, 0, 13, 7, 0), RawField);
+    
   } // namespace fields
 
 } // namespace dsmr
