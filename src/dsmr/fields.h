@@ -301,7 +301,7 @@ namespace dsmr
     DEFINE_FIELD(maximum_current_l3, FixedValue, ObisId(1, 0, 71, 4, 0), FixedField, units::A, units::mA);
     
     /* frequency; Frequency [Hz]  */
-    DEFINE_FIELD(frequency, FixedValue, ObisId(1, 0, 14, 7, 0), FixedField, units::Hz);
+    DEFINE_FIELD(frequency, FixedValue, ObisId(1, 0, 14, 7, 0), FixedField, units::Hz, units::Hz);
     
     /* momentaryPowerFactor; Instantaneous power factor (in rawfileld, but probably should use other struct */
     DEFINE_FIELD(power_factor, String, ObisId(1, 0, 13, 7, 0), RawField);
