@@ -313,7 +313,7 @@ namespace dsmr
     DEFINE_FIELD(power_factor_l3, String, ObisId(1, 0, 73, 7, 0), RawField);
     
      /* Datas on the end of the last month. Text message max 2048 characters */
-    DEFINE_FIELD(monthly_datas, String, ObisId(0, 0, 98, 1, 0), StringField, 0, 2048);
+    DEFINE_FIELD(monthly_datas, String, ObisId(0, 0, 98, 1, 0), RawField, 0, 2048);
 
     /* COSEM_logical_device_name (string) */
     DEFINE_FIELD(COSEM_logical_device_name, String, ObisId(0, 0, 42, 0, 0), StringField, 0, 64);
