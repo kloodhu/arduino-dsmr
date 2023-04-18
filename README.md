@@ -1,4 +1,5 @@
 # Arduino Dutch Smart meter (DSMR) parser
+---modified for hungarian (EON) meters---
 
 This is an Arduino library for interfacing with Dutch smart meters, through
 their P1 port. This library can take care of controlling the "request" pin,
